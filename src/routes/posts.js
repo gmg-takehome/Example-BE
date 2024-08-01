@@ -9,11 +9,15 @@ router.post("/", (req, res) => {
     //put post in database
 })
 
-router.get("/category", (req, res) => {
+router.get("/:SLUG", (req, res) => {
+    //get by slug
+})
+
+router.get("/category/:CATEGORY", (req, res) => {
     //get by category
 })
 
-router.get("/author", (req, res) => {
+router.get("/author/:AUTHOR", (req, res) => {
     //get by author
 })
 

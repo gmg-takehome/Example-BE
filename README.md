@@ -33,6 +33,8 @@ You can now access the page via `localhost:SomePort`
 
 *First time*
 
+Perhaps some instructions go here about file structure or ENV set up and don't forget to install dependancies
+
  - Set up MySQL
  - Set up Node
  - Install dependancies
@@ -42,3 +44,13 @@ You can now access the page via `localhost:SomePort`
  - Some run command `node app.js`
 
 While seeds are provided, it is best to recieve an up-to-date db from the staging environment
+
+***Considerations***
+
+ - Tech Stack:
+  - The Tech Stack used for this example is like a MERN stack, except the M stands for MySQL. Express is robust and easily extensible. MySQL is just a standard SQL db system that is robust and performant. 
+ - Performamce:
+  - We are perhaps taking a performance hit with Express, but with the Redis cluster on our EC2 we should more than make up the difference in performance.
+ - Extensibility:
+  - Between github CI/CD and the generalized file structure, adding or removing features should be relatively simple.
+

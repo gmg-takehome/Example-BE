@@ -13,7 +13,7 @@ function find() {
 }
 
 function findBy(filter) {
-  // make sure to include the role information
+    //generalize for all sorts of post queries
   return db("posts").where(filter);
 }
 
@@ -24,10 +24,8 @@ async function add(post) {
 }
 
 async function edit(post) {
-    const [id] = await db("posts").insert(post);
-  
-    return findById(id);
-  }
+    //edit logic- update where id = post.id;
+}
 
 function findById(id) {
   return db("posts")
