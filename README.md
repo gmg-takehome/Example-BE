@@ -19,7 +19,7 @@ For more information, check the [Wiki](https://github.com/gmg-takehome/Example-B
 
 **Docker Setup**
 
-There would be actual commmands here, but for now some possibilities on what they might be
+There would be actual commmands here, but for now some examples on what they might be
 
 *First time*
 
