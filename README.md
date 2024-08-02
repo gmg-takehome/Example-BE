@@ -55,15 +55,15 @@ Perhaps some instructions go here about file structure or ENV set up and don't f
 
 ***Considerations***
 
- - Tech Stack:
+ *Tech Stack*
   - The Tech Stack used for this example is like a MERN stack, except the M stands for MySQL. Express is robust and easily extensible. MySQL is just a standard SQL db system that is robust and performant. 
- - Performamce:
+ *Performamce*
   - We are perhaps taking a performance hit with Express, but with the Redis cluster on our EC2 we should more than make up the difference in performance.
- - Extensibility:
+ *Extensibility*
   - Between github CI/CD and the organized file structure, adding or removing features should be relatively simple.
- - Documentation:
+ *Documentation*
   - Please check the [Wiki](https://github.com/gmg-takehome/Example-BE/wiki).
- - KPIs
+ *KPIs*
   - Luckily, AWS has several solutions for monitoring it's servers. We can use [Performance Insights](https://aws.amazon.com/rds/performance-insights/), [Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html) and [Distributed Load Testing](https://docs.aws.amazon.com/solutions/latest/distributed-load-testing-on-aws/solution-overview.html) with [JMeter](https://jmeter.apache.org/) scripts. With all of these tools, we can look at server up/downtime, various bottlenecks in performance and their causes and much more.
 
 
