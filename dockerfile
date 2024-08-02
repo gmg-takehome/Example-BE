@@ -1,3 +1,4 @@
+# An example file, the real one would likely contain many more commands to implement various features. This is just set up for a Node container
 FROM node:20
  
 # Install all the dependencies in the container using the package.json file

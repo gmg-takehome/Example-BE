@@ -8,6 +8,8 @@ For more information, check the [Wiki](https://github.com/gmg-takehome/Example-B
 
 **Prerequisites**
 
+*Docker*
+
  - [Docker](https://www.docker.com/)
 
 *Non-docker setup*
@@ -17,9 +19,15 @@ For more information, check the [Wiki](https://github.com/gmg-takehome/Example-B
 
 **Docker Setup**
 
+There would be actual commmands here, but for now some possibilities on what they might be
+
 *First time*
 
-Perhaps some instructions go here about file structure or ENV set up and don't forget to install dependancies
+ - some instructions about about file structure 
+ - ENV set up 
+ - install dependancies
+ - Instrutions for seeding db
+ - While seeds are provided, it is best to recieve an up-to-date db from the staging environment
 
 *Spin up container*
 
@@ -37,13 +45,13 @@ Perhaps some instructions go here about file structure or ENV set up and don't f
 
  - Set up MySQL
  - Set up Node
- - Install dependancies
+ - Install dependencies
+ - Instrutions for seeding db
+ - While seeds are provided, it is best to recieve an up-to-date db from the staging environment
 
 *Spin up server*
 
  - Some run command `node app.js`
-
-While seeds are provided, it is best to recieve an up-to-date db from the staging environment
 
 ***Considerations***
 
@@ -52,5 +60,14 @@ While seeds are provided, it is best to recieve an up-to-date db from the stagin
  - Performamce:
   - We are perhaps taking a performance hit with Express, but with the Redis cluster on our EC2 we should more than make up the difference in performance.
  - Extensibility:
-  - Between github CI/CD and the generalized file structure, adding or removing features should be relatively simple.
+  - Between github CI/CD and the organized file structure, adding or removing features should be relatively simple.
+ - Documentation:
+  - Please check the [Wiki](https://github.com/gmg-takehome/Example-BE/wiki).
+ - KPIs
+  - Luckily, AWS has several solutions for monitoring it's servers. We can use [Performance Insights](https://aws.amazon.com/rds/performance-insights/), [Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html) and [Distributed Load Testing](https://docs.aws.amazon.com/solutions/latest/distributed-load-testing-on-aws/solution-overview.html) with [JMeter](https://jmeter.apache.org/) scripts. With all of these tools, we can look at server up/downtime, various bottlenecks in performance and their causes and much more.
 
+
+***Bonus Considerations***
+
+ - We can help our API with a Redis Cache. You can see an example implementation [here](https://github.com/gmg-takehome/Example-BE/wiki/Diagram-of-Services)
+ - We can implement draft posts by having a flag in the [db](https://github.com/gmg-takehome/Example-BE/wiki/Database-Information). Here we use published to denote whether or not a post is published. Unpublished posts are only accessible to the user who made them when they are logged in. We can handle security using JWTs. You can see some example middleware  [here](https://github.com/gmg-takehome/Example-BE/blob/main/src/middleware/auth%2Cjs)

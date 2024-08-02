@@ -1,3 +1,4 @@
+//these models probably don't have all the features outlined in the wiki
 const db = require("../data/dbConfig.js");
 
 module.exports = {

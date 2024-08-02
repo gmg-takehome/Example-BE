@@ -1,3 +1,4 @@
+// error handling would go here as well i.e. .catch(error) => res.error({appropriate code: error})
 const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken"); 
@@ -36,10 +37,10 @@ router.post("/login", (req, res) => {
     .first()
     .then(user => {
       if (user && bcrypt.compareSync(password, user.password)) {
-        // 2: produce a token
+        // produce a token
         const token = getJwtToken(user.username);
 
-        // 3: send the token to the client
+        // send the token to the client
         res.status(200).json({
           message: `Welcome ${user.username}! have a token...`,
           token
@@ -58,7 +59,7 @@ function getJwtToken(username) {
     username,
   };
 
-  const secret = process.env.JWT_SECRET || "is it secret, is it safe?";
+  const secret = process.env.JWT_SECRET;
 
   const options = {
     expiresIn: "1d"

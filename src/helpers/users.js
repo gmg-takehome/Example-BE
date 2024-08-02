@@ -1,3 +1,4 @@
+//Some example user validation, there would probably be additional requirements
 module.exports = {
     validateUser
   };

@@ -1,3 +1,4 @@
+# An example dockerfile, likely missing some features. This just sets up a MySQL container and a Node container
 version: '3.7'
 services:
   app:
