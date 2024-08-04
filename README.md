@@ -80,3 +80,9 @@ Perhaps some instructions go here about file structure or ENV set up and don't f
 
  - We can help our API with a Redis Cache. You can see an example implementation [here](https://github.com/gmg-takehome/Example-BE/wiki/Diagram-of-Services)
  - We can implement draft posts by having a flag in the [db](https://github.com/gmg-takehome/Example-BE/wiki/Database-Information). Here we use published to denote whether or not a post is published. Unpublished posts are only accessible to the user who made them when they are logged in. We can handle security using JWTs. You can see some example middleware  [here](https://github.com/gmg-takehome/Example-BE/blob/main/src/middleware/auth%2Cjs)
+
+
+***Other Considerations***
+
+ - There are many other ways to achieve a similar, or arguably better backend for such a project. We could have used WP which has it's own benefits and drawbacks: it's perhaps a little cumbersome for this but it has all the features out of the box and is well documented. AWS Lambda funtions could be good here but there is some innate delay. We could have used any other BE language/framework like php/Laravel or python/Django and we'd have similar success. If we were going to be going up multiple orders of magnitude on traffic then we might have to consider some other options, but for a few hundred thousand calls a day most options would work just fine. We go with Node/Express due to it's large ecosystem of code/functionality/support and it's overall quick development time.
+ - There should be a test suite inluded with this to test our end points.
